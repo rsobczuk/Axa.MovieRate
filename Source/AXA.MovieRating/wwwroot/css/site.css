@@ -1,0 +1,45 @@
+﻿.logoDiv
+{
+    width: 70px;
+}
+
+.logo{
+    width: 50px;    
+}
+
+.title{
+    font-family: Verdana;
+    font-size: 1em;
+    margin-top: 13px;
+    font-weight: normal;
+    width: 150px;
+}
+
+.title {
+    font-weight: normal;
+}
+
+.separator {
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.homeWelcome{
+    font-family: Verdana;
+}
+
+.listHeader {
+    font-weight: bold;
+    width: 130px;
+    margin-bottom: 20px;
+    font-family: Verdana;
+    font-size: 1.2em;
+}
+
+.movieTitle {
+    font-size: 1.2em;
+    margin-left: 20px;
+}

@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+@model IEnumerable<AXA.MovieRating.Model.Movie>
+<div class="homeWelcome">
+    Please rate movie from the list below:
+</div>
+<div class="separator"></div>
+<div>
+    @foreach (var movie in Model)
+    {
+        <div style="display:flex">
+            <div class="listHeader">
+                Title:
+            </div>
+            <div class="movieTitle">
+                @Html.DisplayFor(m => movie.Title);
+            </div>
+        </div>
+        <div style="display:flex">
+            <div class="listHeader">
+                Description:
+            </div>
+            <div class="movieTitle">
+                @Html.DisplayFor(m => movie.OpeningCrawl);
+            </div>
+        </div>
+        <div style="display:flex">
+            <div class="listHeader">
+                Director:
+            </div>
+            <div class="movieTitle">
+                @Html.DisplayFor(m => movie.Director);
+            </div>
+        </div>
+        <div style="display:flex">
+            <div class="listHeader">
+                Producer:
+            </div>
+            <div class="movieTitle">
+                @Html.DisplayFor(m => movie.Producer);
+            </div>
+        </div>
+        <div style="display:flex">
+            <div class="listHeader">
+                Rate:
+            </div>
+            <div class="movieTitle" id="@Html.DisplayFor(m => movie.Uniquity)">
+                @Html.DisplayFor(m => movie.Rate)
+            </div>
+        </div>
+        <div style="display:flex">
+            <div class="listHeader">
+                Please rate:
+            </div>
+            <div class="movieTitle">
+                <a href="#" onClick="vote('@Html.DisplayFor(m => movie.Uniquity)', '@Html.DisplayFor(m => movie.Url)', 1)">1</a>
+                <a href="#" onClick="vote('@Html.DisplayFor(m => movie.Uniquity)', '@Html.DisplayFor(m => movie.Url)', 2)">2</a>
+                <a href="#" onClick="vote('@Html.DisplayFor(m => movie.Uniquity)', '@Html.DisplayFor(m => movie.Url)', 3)">3</a>
+                <a href="#" onClick="vote('@Html.DisplayFor(m => movie.Uniquity)', '@Html.DisplayFor(m => movie.Url)', 4)">4</a>
+                <a href="#" onClick="vote('@Html.DisplayFor(m => movie.Uniquity)', '@Html.DisplayFor(m => movie.Url)', 5)">5</a>
+                <a href="#" onClick="vote('@Html.DisplayFor(m => movie.Uniquity)', '@Html.DisplayFor(m => movie.Url)', 6)">6</a>
+                <a href="#" onClick="vote('@Html.DisplayFor(m => movie.Uniquity)', '@Html.DisplayFor(m => movie.Url)', 7)">7</a>
+                <a href="#" onClick="vote('@Html.DisplayFor(m => movie.Uniquity)', '@Html.DisplayFor(m => movie.Url)', 8)">8</a>
+                <a href="#" onClick="vote('@Html.DisplayFor(m => movie.Uniquity)', '@Html.DisplayFor(m => movie.Url)', 9)">9</a>
+                <a href="#" onClick="vote('@Html.DisplayFor(m => movie.Uniquity)', '@Html.DisplayFor(m => movie.Url)', 10)">10</a>
+
+            </div>
+        </div>
+
+        <div class="separator"></div>
+    }
+</div>
