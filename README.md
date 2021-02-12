@@ -11,3 +11,6 @@ Movie Rate Application for AXA
 
 TODO:
 Use ActionFilter or whatever (even build in into .NET DataAnnotations) for validation that voting value is between 1 and 10.
+Create indexes on the database table.
+More comments into the code.
+
